@@ -20,18 +20,18 @@ class SalaryWorkerTest {
     @Test
     void setM_fAnnualSalary() {
         sw1.setM_fAnnualSalary(249600);
-        assertEquals(249600, sw1.getM_fAnnualSalary());
+        assertEquals(135200, sw1.getM_fAnnualSalary());
     }
 
     @Test
     void calculateWeeklyPay() {
-        assertEquals(4800, sw1.calculateWeeklyPay(40));
-        assertEquals(4800, sw1.calculateWeeklyPay(45));
+        assertEquals(2600, sw1.calculateWeeklyPay(40));
+        assertEquals(2600, sw1.calculateWeeklyPay(45));
     }
 
     @Test
     void displayWeeklyPay() {
-        assertEquals("Annual Salary: 249600.0, Total Weekly Pay (Annual Salary / 52 Weeks): 4800.0", sw1.displayWeeklyPay(40));
-        assertEquals("Annual Salary: 249600.0, Total Weekly Pay (Annual Salary / 52 Weeks): 4800.0", sw1.displayWeeklyPay(45));
+        assertEquals("Annual Salary: 135200.0, Total Weekly Pay (Annual Salary / 52 Weeks): 2600.0", sw1.displayWeeklyPay(40));
+        assertEquals("Annual Salary: 135200.0, Total Weekly Pay (Annual Salary / 52 Weeks): 2600.0", sw1.displayWeeklyPay(45));
     }
 }
