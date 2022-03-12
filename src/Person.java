@@ -2,11 +2,11 @@ import java.util.Calendar;
 
 public class Person
 {
-    String m_ID;
-    String m_firstName;
-    String m_lastName;
-    String m_title;
-    int m_yearOfBirth;
+    private String m_ID;
+    private String m_firstName;
+    private String m_lastName;
+    private String m_title;
+    private int m_yearOfBirth;
 
     Person()
     {
@@ -80,14 +80,14 @@ public class Person
     {
         Calendar cal = Calendar.getInstance();
 
-        return (cal.get(Calendar.YEAR) - m_yearOfBirth) + " ";
+        return String.valueOf(cal.get(Calendar.YEAR) - m_yearOfBirth);
     }
 
     public String getAge(int year)
     {
         if(year < m_yearOfBirth) return 0 + "";
 
-        return (year - m_yearOfBirth) + " ";
+        return String.valueOf(year - m_yearOfBirth);
     }
 
     public String toCSVDataRecord()
@@ -97,5 +97,14 @@ public class Person
         CSVDataRecord = String.format("%s, %s, %s, %s, %d", m_ID, m_firstName, m_lastName, m_title, m_yearOfBirth);
 
         return CSVDataRecord;
+    }
+
+    public String toString()
+    {
+        String objectString = "Person{ID=" + m_ID + ",First Name=" + m_firstName;
+        objectString += ",Last Name=" + m_lastName + ",Title=" + m_title;
+        objectString += ",Year of Birth=" + m_yearOfBirth + "}";
+
+        return  objectString;
     }
 }

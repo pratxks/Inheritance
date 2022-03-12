@@ -3,11 +3,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class WorkerTest {
-    Worker w1;
+    Worker w1, w2;
+    Person p2;
 
     @org.junit.jupiter.api.BeforeEach
-    void setUp() {
+    void setUp()
+    {
         w1 = new Worker("000001", "Pratik", "Chaudhari", "Mr.", 2002, 120);
+
+        p2 = new Person("000002", "Bilbo", "Baggins", "Esq.", 1972);
+
+        w2 = new Worker(p2, 65);
     }
 
     @org.junit.jupiter.api.Test

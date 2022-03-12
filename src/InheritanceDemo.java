@@ -46,14 +46,23 @@ public class InheritanceDemo
 
     public static void main(String[] args)
     {
-        Worker w1 = new Worker("000001", "Biblo", "Baggins", "Esq.", 1060, 100.0);
-        Worker w2 = new Worker("000002", "Frodo", "Baggins", "Esq.", 1120, 60.0);
-        Worker w3 = new Worker("000003", "Samwise", "Gamgee", "Esq.", 1125, 130.0);
+        Worker w1 = new Worker("000001", "Biblo", "Baggins", "Esq.", 1960, 100.0);
+        System.out.println(w1);
+        Person p2 = new Person("000002", "Frodo", "Baggins", "Esq.", 2000);
+        Worker w2 = new Worker(p2, 60.0);
+        System.out.println(w2);
+        Worker w3 = new Worker("000003", "Samwise", "Gamgee", "Esq.", 1985, 130.0);
+        System.out.println(w3);
 
-        Worker w4 = new SalaryWorker("000004", "Peregrin", "Took", "Esq.", 1126, 300.0, 624000.0 );
-        Worker w5 = new SalaryWorker("000005", "Meridoc", "Brandybuck", "Esq.", 1126, 220.0, 457600.0);
-        Worker w6 = new SalaryWorker("000006", "Frodo", "Gamgee", "Esq.", 1080, 120.0, 249600.0);
+        Worker w4 = new SalaryWorker("000004", "Peregrin", "Took", "Esq.", 1965, 300.0, 624000.0 );
+        System.out.println(w4);
+        Person p5 = new Person("000005", "Meridoc", "Brandybuck", "Esq.", 1970);
+        Worker w5 = new SalaryWorker(p5, 220.0, 457600.0);
+        System.out.println(w5);
+        Worker w6 = new SalaryWorker("000006", "Frodo", "Gamgee", "Esq.", 1998, 120.0, 249600.0);
+        System.out.println(w6);
 
+        System.out.println("\n\n");
         ArrayList<Worker> arrayOfWorkers = new ArrayList<Worker>();
 
         arrayOfWorkers.add(w1);

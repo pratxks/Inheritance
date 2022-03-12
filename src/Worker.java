@@ -16,6 +16,14 @@ public class Worker extends Person
         m_fHourlyPayRate = hourlyPayRate;
     }
 
+    Worker(Person personObject, double hourlyPayRate)
+    {
+        super(personObject.getM_ID(), personObject.getM_firstName(),
+                personObject.getM_lastName(), personObject.getM_title(), personObject.getM_yearOfBirth());
+
+        m_fHourlyPayRate = hourlyPayRate;
+    }
+
     public double getM_fHourlyPayRate() {
         return m_fHourlyPayRate;
     }
@@ -62,5 +70,14 @@ public class Worker extends Person
         weeklyPayDisplay += calculateWeeklyPay(hoursWorked);
 
         return weeklyPayDisplay;
+    }
+
+    public String toString()
+    {
+        String objectString = "Worker{ID=" + getM_ID() + ",First Name=" + getM_firstName();
+        objectString += ",Last Name=" + getM_lastName() + ",Title=" + getM_title();
+        objectString += ",Year of Birth=" + getM_yearOfBirth() + ",Hourly Pay Rate=" + m_fHourlyPayRate + "}";
+
+        return  objectString;
     }
 }

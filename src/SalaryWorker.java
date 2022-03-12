@@ -16,6 +16,13 @@ public class SalaryWorker extends Worker
         m_fAnnualSalary = annualSalary;
     }
 
+    SalaryWorker(Person personObject, double hourlyPayRate, double annualSalary)
+    {
+        super(personObject, hourlyPayRate);
+
+        m_fAnnualSalary = annualSalary;
+    }
+
     public double getM_fAnnualSalary() {
         return m_fAnnualSalary;
     }
@@ -37,5 +44,15 @@ public class SalaryWorker extends Worker
         weeklyPayDisplay += calculateWeeklyPay(hoursWorked);
 
         return weeklyPayDisplay;
+    }
+
+    public String toString()
+    {
+        String objectString = "SalaryWorker{ID=" + getM_ID() + ",First Name=" + getM_firstName();
+        objectString += ",Last Name=" + getM_lastName() + ",Title=" + getM_title();
+        objectString += ",Year of Birth=" + getM_yearOfBirth() + ",Hourly Pay Rate=" + getM_fHourlyPayRate();
+        objectString += ",Annual Salary=" + m_fAnnualSalary + "}";
+
+        return  objectString;
     }
 }
