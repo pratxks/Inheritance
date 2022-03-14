@@ -48,11 +48,6 @@ public class SalaryWorker extends Worker
 
     public String toString()
     {
-        String objectString = "SalaryWorker{ID=" + getM_ID() + ",First Name=" + getM_firstName();
-        objectString += ",Last Name=" + getM_lastName() + ",Title=" + getM_title();
-        objectString += ",Year of Birth=" + getM_yearOfBirth() + ",Hourly Pay Rate=" + getM_fHourlyPayRate();
-        objectString += ",Annual Salary=" + m_fAnnualSalary + "}";
-
-        return  objectString;
+        return super.toString() + " Annual Salary=" + m_fAnnualSalary + "}";
     }
 }

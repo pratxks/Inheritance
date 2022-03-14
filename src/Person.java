@@ -101,10 +101,8 @@ public class Person
 
     public String toString()
     {
-        String objectString = "Person{ID=" + m_ID + ",First Name=" + m_firstName;
-        objectString += ",Last Name=" + m_lastName + ",Title=" + m_title;
-        objectString += ",Year of Birth=" + m_yearOfBirth + "}";
-
-        return  objectString;
+        return "Person{ID=" + m_ID + " First Name=" + m_firstName +
+            " Last Name=" + m_lastName + " Title=" + m_title +
+            " Year of Birth=" + m_yearOfBirth + "}";
     }
 }

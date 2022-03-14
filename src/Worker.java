@@ -74,10 +74,6 @@ public class Worker extends Person
 
     public String toString()
     {
-        String objectString = "Worker{ID=" + getM_ID() + ",First Name=" + getM_firstName();
-        objectString += ",Last Name=" + getM_lastName() + ",Title=" + getM_title();
-        objectString += ",Year of Birth=" + getM_yearOfBirth() + ",Hourly Pay Rate=" + m_fHourlyPayRate + "}";
-
-        return  objectString;
+        return super.toString() + " Hourly Pay Rate=" + m_fHourlyPayRate + "}";
     }
 }
